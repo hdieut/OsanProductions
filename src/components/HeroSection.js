@@ -12,7 +12,8 @@ function HeroSection() {
         <h1>Adventure Awaits</h1>
         <p> what are you waiting for</p>
         <div className='heroBtns'>
-            <button className='btns-learn-more'>Learn more</button>
+            {/* <button className='btns-learn-more'>Learn more</button> */}
+            <a href='./About' className='btns-learn-more'>Learn More</a>
         </div>
     </div>
   )

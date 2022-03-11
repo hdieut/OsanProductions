@@ -3,13 +3,12 @@ video {
     width: 100%;
     height: 100%;
     position: fixed;
-    /* z-index: -1; */
     z-index: -1;
 }
 
 .heroContainer {
-    /* background: url('images/IMG_4301.jpeg') center center/cover no-repeat;  */
-    height: 100vh;
+    /* background: url('../images/IMG_4031.jpeg') center center cover no-repeat;  */
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;

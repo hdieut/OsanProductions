@@ -7,30 +7,22 @@ import './Navbar.css';
 function Navbar() {
     /* what will update the state */
     const [click, setClick] = useState(false);
-    // const [button, setButton] = useState(true);
 
     /* sets click to opposite of click so it swtiches back */
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    // const showButton = () => {
-    //     if(window.innerWidth <= 960) {
-    //         setButton(false)
-    //     } else {
-    //         setButton(true)
-    //     }
-    // };
-
-    // window.addEventListener('resize', showButton);
 
 
     return(
         <>
            <nav className='navbar'>
                <div className='navbarContainer'>
-                   <Link to='/' className='navbarLogo' onClick={closeMobileMenu}>
-                       OSAN Productions
-                   </Link>
+                   <div className='navLogoContainer'>
+                        <Link to='/' className='navbarLogo' onClick={closeMobileMenu}>
+                             Whose House?
+                        </Link>
+                    </div>
                    <div className='menuIcon' onClick={handleClick}>
                        {/* not clicked will be hamburger menu, when clicked will be bars */}
                        <i className= {click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -48,17 +40,16 @@ function Navbar() {
                            </Link>
                        </li>
                        <li className='navItem'>
-                           <Link to='/social' className='navLinks' onClick={closeMobileMenu}>
-                               Social
-                           </Link>
-                       </li>
-                       <li className='navItem'>
                            <Link to='/gallery' className='navLinks' onClick={closeMobileMenu}>
                                Gallery
                            </Link>
                        </li>
+                       <li className='navItem'>
+                           <Link to='/contact' className='navLinks' onClick={closeMobileMenu}>
+                               Contact Us
+                           </Link>
+                       </li>
                    </ul>
-                 { /* {button && <Button buttonStyle='btn--outline'>Gallery</Button>} */}
                </div>
            </nav>
         </>
